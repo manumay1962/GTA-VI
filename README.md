@@ -69,15 +69,49 @@ Here are some screenshots of the **GTA VI Hub**:
 
 
 ---
+## **Installation**
 
-## Installation
+Follow the steps below to get the project up and running on your local machine.
 
-If you'd like to run the project locally, follow the steps below:
-
-### 1. Clone the repository
+### **Clone the repository**
 
 ```bash
-git clone https://github.com/manumay1962/gta-vi-hub.git
+git clone https://github.com/manumay1962/gta-vi-website.git 
+```
+
+### **Navigate to the project folder**
+
+```bash
+cd gta-vi-website
+```
+
+### **Install dependencies**
+
+```bash
+npm install
+```
+
+---
+
+## **Usage**
+
+### **Run the development server**
+
+Start the development server to view the project locally:
+
+```bash
+npm start
+```
+
+After running the above command, your website should be accessible at `http://localhost:3000`.
+
+## **Contributing**
+
+We welcome contributions! If you'd like to contribute to the project, feel free to fork the repository, create a new branch, and submit a pull request with your changes.
 
 
+## Feedback
+
+If you have any feedback, please reach out to us at manumay8@gmail.com
+Happy Coding :)
 
