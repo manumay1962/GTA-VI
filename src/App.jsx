@@ -2,6 +2,8 @@ import { useGSAP } from "@gsap/react";
 import React, { useState } from "react";
 import { gsap } from "gsap";
 import "remixicon/fonts/remixicon.css";
+import Card from "./components/Card";
+import Trailer from "./components/Trailer";
 
 function App() {
   const [ShowContent, setShowContent] = useState(false);
@@ -200,6 +202,8 @@ function App() {
               </div>
             </div>
           </div>
+          <Card />
+          <Trailer />
         </div>
       )}
     </>
