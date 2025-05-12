@@ -76,4 +76,6 @@ If you'd like to run the project locally, follow the steps below:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/gta-vi-hub.git
+git clone https://github.com/manumay1962/gta-vi-hub.git
+
+### 2. Navigate to the project folder
