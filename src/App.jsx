@@ -55,7 +55,7 @@ function App() {
     });
     gsap.to(".character", {
       rotate: 0,
-      scale: 0.8,
+      scale: 1,
       delay: "-0.8",
       bottom: "-70%",
       duration: 2,
