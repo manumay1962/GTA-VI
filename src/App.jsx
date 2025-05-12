@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import React, { useState } from "react";
 import { gsap } from "gsap";
-import 'remixicon/fonts/remixicon.css'
+import "remixicon/fonts/remixicon.css";
 
 function App() {
   const [ShowContent, setShowContent] = useState(false);
@@ -29,21 +29,49 @@ function App() {
     });
   }, []);
   useGSAP(() => {
+    if (!ShowContent) return;
+    gsap.to(".main", {
+      rotate: 0,
+      scale: 1,
+      delay: "-1",
+      duration: 2,
+      ease: "Expo.easeInOut",
+    });
+    gsap.to(".sky", {
+      rotate: 0,
+      scale: 1.1,
+      delay: "-0.8",
+      duration: 2,
+      ease: "Expo.easeInOut",
+    });
+    gsap.to(".building", {
+      rotate: 0,
+      scale: 1.2,
+      delay: "-0.8",
+      duration: 2,
+      ease: "Expo.easeInOut",
+    });
+    gsap.to(".character", {
+      rotate: 0,
+      scale: 0.8,
+      delay: "-0.8",
+      bottom: "-70%",
+      duration: 2,
+      ease: "Expo.easeInOut",
+    });
+
     const main = document.querySelector(".main");
     main?.addEventListener("mousemove", (e) => {
-      const xMove=(e.clientX/window.innerWidth - 0.5)*40;
-     
+      const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
+
       gsap.to(".text", {
-        x:`${xMove * 0.4}%` ,
-       
+        x: `${xMove * 0.4}%`,
       });
       gsap.to(".sky", {
-        x:xMove ,
-       
+        x: xMove,
       });
       gsap.to(".building", {
-        x:xMove ,
-       
+        x: xMove,
       });
     });
   }, [ShowContent]);
@@ -79,8 +107,8 @@ function App() {
         </svg>
       </div>
       {ShowContent && (
-        <div className="w-full  main ">
-          <div className="w-full h-screen    bg-black landing">
+        <div className="w-full  main  rotate-[-20deg] scale-[1.8] ">
+          <div className="w-full h-screen  bg-black landing overflow-hidden relative">
             <div className="navbar top-0 left-0 py-10 w-full px-10 absolute z-[10] ">
               <div className="flex gap-7  items-center ">
                 <div className="lines flex  flex-col gap-1  logo ">
@@ -91,32 +119,85 @@ function App() {
                 <div className="text-3xl text-white leading-none">rockstar</div>
               </div>
             </div>
-           
+
             <div className="imagesdiv overflow-hidden relative w-full h-screen ">
-            <img
-                className=" top-0 sky scale-[1.2] left-0 w-full h-full object-cover"
+              <img
+                className=" top-0 sky scale-[1.5] rotate-[-20deg] left-0 w-full h-full object-cover"
                 src="./sky.png"
                 alt=""
               />
               <img
-                className="w-full h-full scale-[1.1] building object-cover absolute top-0 left-0"
+                className="w-full h-full scale-[1.8] rotate-[-5deg]  building object-cover absolute top-0 left-0"
                 src="./bg.png"
                 alt=""
               />
-               <div className="text absolute top-10 left-1/2 flex flex-col gap-3 -translate-x-1/2 ">
-              <h1 className="text-white text text-8xl -ml-20 leading-none ">grand</h1>
-              <h1 className="text-white text text-8xl ml-20 leading-none ">theft</h1>
-              <h1 className="text-white text  text-8xl -ml-20 leading-none ">auto</h1>
-            </div>
-              <img className="character  absolute -bottom-[70%] scale-80 left-[25%]" src="./girlbg.png" alt="" />
-              
+              <div className="text absolute top-10 left-1/2 flex flex-col gap-3 -translate-x-1/2 ">
+                <h1 className="text-white text text-8xl -ml-20 leading-none ">
+                  grand
+                </h1>
+                <h1 className="text-white text text-8xl ml-20 leading-none ">
+                  theft
+                </h1>
+                <h1 className="text-white text  text-8xl -ml-20 leading-none ">
+                  auto
+                </h1>
+              </div>
+              <img
+                className="character  absolute -bottom-[210%] scale-[3] rotate-[-20deg] left-[25%]"
+                src="./girlbg.png"
+                alt=""
+              />
             </div>
             <div className="btmbar w-full py-10 px-10 bottom-0 left-0 bg-gradient-to-t from-black to-transparent absolute z-10">
               <div className=" flex gap-4 items-center ">
-              <i className="text-3xl text-white ri-arrow-down-line"></i>
-              <h3 className="font-[Helvetica_Now_Display] text-xl text-white">Scroll Down</h3>
+                <i className="text-3xl text-white ri-arrow-down-line"></i>
+                <h3 className="font-[Helvetica_Now_Display] text-xl text-white">
+                  Scroll Down
+                </h3>
               </div>
-              <img  src="./ps5.png" className="h-[65px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute z-10" alt="" />
+              <img
+                src="./ps5.png"
+                className="h-[65px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute z-10"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="bg-black flex px-20 items-center justify-center w-full h-screen">
+            <div className="cant flex justify-between  items-center w-full h-[80%] ">
+              <div className="relative limg h-full w-1/2">
+                <img
+                  className=" hover:scale-80 transition-all duration-300 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.7] "
+                  src="./imag.png"
+                  alt=""
+                />
+              </div>
+              <div className="relative rimg w-1/2">
+                <h1 className=" hover:scale-105 transition-all duration-300 text-white text-6xl  mb-2 ">
+                  Explore. Build.{" "}
+                </h1>
+                <h1 className="hover:scale-105 transition-all duration-300 text-white text-6xl  ">
+                  Dominate. VI.
+                </h1>
+                <p className=" text-white text-xl mt-8 font-[Helvetica_Now_Display]">
+                  Welcome to the ultimate destination for GTA VI enthusiasts.
+                  Explore buildings, maps, leaks, and thrilling gameplay
+                  content. Stay updated with news, videos, and community
+                  discussions about Grand Theft Auto VI.
+                </p>
+                <p className="text-white text-xl mt-3 font-[Helvetica_Now_Display]">
+                  Discover the future of open-world gaming with our GTA VI hub.
+                  From iconic buildings to thrilling leaks and updates, dive
+                  into everything you need to know about Rockstar’s next
+                  masterpiece.
+                </p>
+                <p className="text-white text-xl mt-3 font-[Helvetica_Now_Display]">
+                  Explore buildings, leaks, and updates from the exciting world
+                  of GTA VI today!
+                </p>
+                <button className="hover:scale-105 transition-all duration-300 text-black bg-yellow-500 px-8 py-8 rounded text-3xl mt-10">
+                  Explore More
+                </button>
+              </div>
             </div>
           </div>
         </div>
