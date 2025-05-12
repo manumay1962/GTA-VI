@@ -93,17 +93,7 @@ npm install
 
 ---
 
-## **Usage**
 
-### **Run the development server**
-
-Start the development server to view the project locally:
-
-```bash
-npm start
-```
-
-After running the above command, your website should be accessible at `http://localhost:3000`.
 
 ## **Contributing**
 
