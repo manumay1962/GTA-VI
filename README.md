@@ -52,19 +52,19 @@ Check out the live demo of the site here:
 Here are some screenshots of the **GTA VI Hub**:
 
 ### Screenshot 1:  
-(![Screenshot 2025-05-12 094814](https://github.com/user-attachments/assets/d0d6d388-9f3c-426e-85b5-26a313973f77)
+![Screenshot 2025-05-12 094814](https://github.com/user-attachments/assets/d0d6d388-9f3c-426e-85b5-26a313973f77)
 
 
 ### Screenshot 2:  
-(![Screenshot 2025-05-12 094834](https://github.com/user-attachments/assets/c84055d1-a8c7-4fa4-bc7d-2cc6db47c325)
+![Screenshot 2025-05-12 094834](https://github.com/user-attachments/assets/c84055d1-a8c7-4fa4-bc7d-2cc6db47c325)
 
 
 ### Screenshot 3:  
-(![Screenshot 2025-05-12 094859](https://github.com/user-attachments/assets/7ba3230f-0145-4190-ac57-ecb8d61ef103)
+![Screenshot 2025-05-12 094859](https://github.com/user-attachments/assets/7ba3230f-0145-4190-ac57-ecb8d61ef103)
 
 
 ### Screenshot 4:  
-(![Screenshot 2025-05-12 094923](https://github.com/user-attachments/assets/0b192e19-eaa6-46bf-914d-a133e529013b)
+![Screenshot 2025-05-12 094923](https://github.com/user-attachments/assets/0b192e19-eaa6-46bf-914d-a133e529013b)
 
 
 
